@@ -1,0 +1,15 @@
+@import '../node_modules/bootstrap/scss/mixins';
+
+@import '../node_modules/bootstrap/scss/functions';
+
+@import '../node_modules/bootstrap/scss/variables';
+
+@include media-breakpoint-up(xs) {
+  .navbar {
+    background-color: red !important;
+  }
+}
+
+body {
+  background-color: #211f1f;
+}
