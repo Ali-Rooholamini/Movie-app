@@ -30,9 +30,6 @@ export default {
       required: true,
     },
   },
-  created() {
-    console.log(this.movieData)
-  },
 }
 </script>
 
@@ -79,8 +76,10 @@ export default {
   .movie-card_desc {
     padding: 5px;
     color: white;
+    text-align: justify;
+    font-weight: 500;
     width: 100%;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 28px;
     user-select: none;
     background-color: rgba(225, 18, 18, 0.8);

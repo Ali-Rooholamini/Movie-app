@@ -11,7 +11,7 @@
 <script>
 import MovieCard from '~/components/global/MovieCard.vue'
 
-import getLatestMovies from '~/services/data'
+import { getLatestMovies } from '~/services/data'
 export default {
   name: 'MoviesList',
   components: {
@@ -23,14 +23,9 @@ export default {
     }
   },
   created() {
-    getLatestMovies(this.$axios)
-      .then(({ data }) => {
-        console.log(data.results)
-        this.moviesData = data.results
-      })
-      .catch((e) => {
-        console.error(e)
-      })
+    getLatestMovies(this.$axios).then(({ data }) => {
+      this.moviesData = data.results
+    })
   },
 }
 </script>
