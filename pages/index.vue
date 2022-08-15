@@ -8,7 +8,9 @@
           class="col-12 col-md-5 col-lg-3"
         />
       </div>
-      <div class="row"></div>
+      <div class="row movies-list_wrapper">
+        <MovieList />
+      </div>
     </section>
   </main>
 </template>
@@ -16,11 +18,13 @@
 <script>
 import MainHeader from '~/components/template/MainHeader.vue'
 import MovieSearchBox from '~/components/page/index/MovieSearchBox.vue'
+import MovieList from '~/components/page/index/MoviesList.vue'
 export default {
   name: 'IndexPage',
   components: {
     MainHeader,
     MovieSearchBox,
+    MovieList,
   },
   data() {
     return {
