@@ -1,6 +1,6 @@
 <template>
   <main>
-    <MainHeader />
+    <MainHeader @goToMovies="goToMoviesList" />
     <section class="container">
       <div class="row search-box_wrapper">
         <MovieSearchBox
@@ -8,7 +8,7 @@
           class="col-12 col-md-5 col-lg-3"
         />
       </div>
-      <div class="row movies-list_wrapper">
+      <div ref="moviesList" class="row movies-list_wrapper">
         <MovieList />
       </div>
     </section>
@@ -30,6 +30,11 @@ export default {
     return {
       searchBoxValue: '',
     }
+  },
+  methods: {
+    goToMoviesList() {
+      this.$refs.moviesList.scrollIntoView({ behavior: 'smooth' }, true)
+    },
   },
 }
 </script>

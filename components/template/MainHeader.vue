@@ -5,7 +5,9 @@
       <span v-if="!$nuxt.isOffline">Now Streaming</span>
       <span v-else class="offline">You Are Offline</span>
       <h1>Now Streaming</h1>
-      <button class="main-header_button">View Movies</button>
+      <button class="main-header_button" @click="goToMovies">
+        View Movies
+      </button>
     </div>
   </section>
 </template>
@@ -13,6 +15,11 @@
 <script>
 export default {
   name: 'MainHeader',
+  methods: {
+    goToMovies() {
+      this.$emit('goToMovies')
+    },
+  },
 }
 </script>
 
