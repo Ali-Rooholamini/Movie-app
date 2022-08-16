@@ -9,7 +9,7 @@
         />
       </div>
       <div ref="moviesList" class="row movies-list_wrapper">
-        <MovieList />
+        <MovieList :searched-movies="searchBoxValue" />
       </div>
     </section>
   </main>

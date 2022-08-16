@@ -10,7 +10,14 @@ export function getMovieById(axios, movieId) {
   )
 }
 
+export function getSearchedMovies(axios, text) {
+  return axios.get(
+    `https://api.themoviedb.org/3/search/movie?api_key=37ed43a4f8eaa2abd75f9283692947bc&language=en-US&page=1&query=${text}`
+  )
+}
+
 export default {
   getLatestMovies,
   getMovieById,
+  getSearchedMovies,
 }

@@ -94,6 +94,7 @@ export default {
   display: flex;
   flex-direction: column;
   color: white;
+  width: 300px;
 
   .movie-release-date {
     color: rgb(165, 162, 162);
